@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificado académico | Fundación Universitaria Compensar</title>
+    <meta
+      name="description"
+      content="Certificado académico del estudiante Julian Tomas Abril Ortiz con promedio acumulado y registro de materias aprobadas."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loginScreen" class="auth-screen">
+      <div class="auth-card">
+        <div class="auth-header">
+          <img src="main-logo.svg" alt="Fundación Universitaria Compensar" class="brand-logo" />
+          <h2>Acceso institucional</h2>
+          <p>Inicia sesión para ver el certificado académico.</p>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <div class="form-group">
+            <label for="username">Usuario</label>
+            <input id="username" name="username" type="text" placeholder="Correo Institucional" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input id="password" name="password" type="password" placeholder="Contraseña" required />
+          </div>
+
+          <button type="submit">Ingresar</button>
+          <p id="loginError" class="error-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div id="appContent" class="app-content hidden">
+      <header class="topbar">
+        <div class="browser-bar">
+          <div class="browser-actions">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+
+          <div class="browser-tab">
+            <span class="tab-icon">⌂</span>
+            <span>home | UCompensar</span>
+            <span class="tab-close">×</span>
+          </div>
+
+          <button id="logoutBtn" class="logout-btn" type="button">Cerrar sesión</button>
+        </div>
+      </header>
+
+      <main class="page-shell">
+        <section class="hero-report" id="resumen">
+          <div class="container report-header">
+            <div>
+              <span class="eyebrow">Registro oficial</span>
+              <h1>Constancia de notas</h1>
+            </div>
+
+            <div class="student-card">
+              <div class="student-avatar">J</div>
+              <div>
+                <strong id="studentName">Julian Tomas Abril Ortiz</strong>
+                <span id="studentGrade">Séptimo semestre · Licenciatura en Bilingüismo con Énfasis en Inglés</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container dashboard">
+          <div class="summary-grid">
+            <article class="summary-card accent">
+              <span>Promedio acumulado</span>
+              <strong id="avgGeneral">0.0</strong>
+              <small>Escala de 0 a 5.0</small>
+            </article>
+
+            <article class="summary-card">
+              <span>Semestre</span>
+              <strong>7</strong>
+              <small>Jornada nocturna</small>
+            </article>
+
+            <article class="summary-card">
+              <span>Asignaturas aprobadas</span>
+              <strong id="approvedSubjects">0</strong>
+              <small>Registro académico vigente</small>
+            </article>
+
+            <article class="summary-card">
+              <span>Modalidad</span>
+              <strong>Presencial</strong>
+              <small>SNIES 110093</small>
+            </article>
+          </div>
+
+          <div class="content-grid" id="calificaciones">
+            <section class="panel table-panel">
+              <div class="panel-header">
+                <div>
+                  <span class="eyebrow">Calificaciones</span>
+                  <h2>Registro de aprobación</h2>
+                </div>
+                <span class="status-pill">Certificado oficial</span>
+              </div>
+
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Asignatura</th>
+                      <th>Definitiva</th>
+                      <th>Créditos</th>
+                      <th>Tipo</th>
+                      <th>Fecha</th>
+                    </tr>
+                  </thead>
+                  <tbody id="gradesTableBody"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <aside class="panel side-panel" id="desempeno">
+              <div class="panel-header compact">
+                <div>
+                  <span class="eyebrow">Detalle</span>
+                  <h2>Resumen</h2>
+                </div>
+              </div>
+
+              <div class="info-list">
+                <div class="detail-card">
+                  <span>Programa</span>
+                  <strong>Licenciatura en Bilingüismo con Énfasis en Inglés</strong>
+                </div>
+                <div class="detail-card">
+                  <span>Jornada</span>
+                  <strong>Nocturna</strong>
+                </div>
+                <div class="detail-card">
+                  <span>Horario</span>
+                  <strong>6:00 p.m. a 10:00 p.m.</strong>
+                </div>
+                <div class="detail-card">
+                  <span>Documento</span>
+                  <strong>CC 1123430392</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <div>
+            <strong>Fundación Universitaria Compensar</strong>
+            <span>Institución privada de educación superior, de utilidad común.</span>
+          </div>
+          <div>Expedido en Bogotá D.C. · 21 de julio de 2026</div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
