@@ -18,7 +18,7 @@ const avgGeneral = document.getElementById('avgGeneral');
 const approvedSubjects = document.getElementById('approvedSubjects');
 
 const validUser = 'jtabril@ucompensar.edu.co';
-const validPassword = 'Juliantomas123';
+const validPassword = '3:LNWFp^#1QZJ>@X';
 
 function showApp() {
   loginScreen.classList.add('hidden');
